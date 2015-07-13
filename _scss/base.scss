@@ -1,0 +1,77 @@
+/*!
+	Theme Name: CISNT
+	Theme URI: http://www.cisnt.com/
+	Author: CmdTab
+	Author URI: http://www.cmdtab.co
+	Description: Description
+	Version: 1.0
+	License: GNU General Public License
+	License URI: license.txt
+	Domain Path: /languages/
+*/
+
+@import "var";
+@import "bits";
+@import "normalize";
+
+html,body {
+	overflow-x:hidden;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+}
+body {
+	color: $black;
+	font:
+		1.05em
+		"proxima-nova", Helvetica, sans-serif;
+	font-weight: 400;
+}
+h1 {
+	font-size: 2.5em;
+	font-family: "proxima-nova", serif;
+	font-weight: 400;
+}
+h2 {
+	font-size: 2em;
+	font-family: "proxima-nova", serif;
+	font-weight: 400;
+}
+h3 {
+	font-size: 1.5em;
+	font-family: "proxima-nova", serif;
+	font-weight: 700;
+}
+h4 {
+	font-size: 1.250em;
+	font-family: "proxima-nova", serif;
+	font-style: italic;
+	font-weight: 100;
+}
+a {
+	color: $blue;
+	font-family: "proxima-nova", sans-serif;
+	text-decoration: none;
+	@include bp(25) {
+		transition: all 500ms ease;
+		&:hover {
+			color: darken($blue, 10%);
+			transition: all 500ms ease;
+		}
+	}
+}
+p {
+	font-family: "proxima-nova", sans-serif;
+	line-height: 150%;
+	font-size: 0.95em;
+	font-weight: 100;
+	@include bp(44) {
+		font-size: 1.05em;
+	}
+}
+
+@import "modules";
+@import "fonts";
+@import "header";
+@import "footer";
+@import "home";
+@import "carousel";

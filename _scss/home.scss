@@ -1,0 +1,155 @@
+.site-main {
+	h1 {
+		text-align: center;
+		max-width: 20em;
+		margin: 0 auto;
+		padding-bottom: 1.65em;
+		span {
+			color: $blue;
+			font-weight: 700;
+		}
+	}
+}
+.cisnt-stats,
+.volunteer-donate {
+	h1 {
+		font-size: 1.5em;
+		@include bp(44) {
+			font-size: 2em;
+		}
+		@include bp(67.5) {
+			font-size: 2.5em;
+		}
+	}
+	img {
+		max-width: 100px;
+	}
+}
+
+.cisnt-stats {
+	text-align: center;
+	padding: 2em 0 1em;
+	.half {
+		padding-bottom: 2em;
+	}
+	@include bp(44) {
+		padding: 4em 0 3em;
+	}
+}
+
+.volunteer-donate {
+	text-align: center;
+	padding-bottom: 5em;
+	.btn {
+		@include button($orange, white, $orange);
+		width: 14em;
+		margin: 0 auto 1em;
+		display: block;
+		padding: 1.15em 0.5em;
+		font-size: 0.875em;
+		@include bp(44) {
+			width: 16em;
+			margin-right: 2em;
+			display: inline-block;
+			font-size: 1em;
+			padding: 1em 0.5em;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+}
+.blog-links {
+	background: $back-blue;
+	padding: 3em 0 5em;
+	.wrap {
+		max-width: 50em;
+		padding: 0 1em;
+	}
+	h2 {
+		text-align: left;
+		font-weight: 700;
+		color: $blue;
+	}
+	.blog-posts,
+	.more-links {
+		h2:before {
+			content: '';
+			width: 2em;
+			height: 0.05em;
+			background-color: lighten( $light-blue , 10% );
+			position: absolute;
+			top: 1.875em;
+			left: 0;
+			@include bp(50) {
+				top: 2.55em;
+			}
+		}
+	}
+	.blog-posts {
+		width: 100%;
+		position: relative;
+		@include bp(50) {
+			width: 55%;
+			margin-right: 7.5%;
+			float: left;
+		}
+	}
+	.single-post {
+		padding: 1.5em 0 0;
+		position: relative;
+		h3 {
+			color: $light-blue;
+			font-weight: 100;
+			margin: 0;
+		}
+		a {
+			color: darken( $gray , 15% );
+			font-style: italic;
+			font-weight: 100;
+			font-size: 0.8em;
+		}
+		p {
+			font-size: 0.9em;
+			a {
+				padding-top: 0.25em;
+				display: block;
+				color: $light-blue;
+				font-size: 1em;
+				font-style :normal;
+			}
+			span {
+				padding-left: 0.25em;
+			}
+		}
+	}
+	.more-links {
+		width: 100%;
+		position: relative;
+		ul {
+			padding: 1.5em 0 0;
+			margin: 0;
+		}
+		li {
+			list-style: none;
+			padding-bottom: 0.875em;
+			span {
+				padding-right: 0.5em;
+				color: $light-blue;
+			}
+			a {
+				color: $black;
+				font-weight: 100;
+				font-size: 0.9em;
+				&:hover {
+					color: $light-blue;
+				}
+			}
+		}
+		@include bp(50) {
+			float: left;
+			width: 37.5%;
+		}
+	}
+}

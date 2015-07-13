@@ -1,0 +1,76 @@
+@mixin bp($point) {
+	@if $point == 80 /* 1280px */{
+		@media (min-width: 80em) { @content; }
+	}
+	@else if $point == 67.5 /* 1080px */{
+		@media (min-width: 67.5em) { @content; }
+	}
+	@else if $point == 56.5 /* 900px */{
+		@media (min-width: 56.5em) { @content; }
+	}
+	@else if $point == 50 /* 800px */{
+		@media (min-width: 50em) { @content; }
+	}
+	@else if $point == 44 /* 704px */{
+		@media (min-width: 44em) { @content; }
+	}
+	@else if $point == 37.5 /* 600px */{
+		@media (min-width: 37.5em) { @content; }
+	}
+	@else if $point == 32 /* 512px */{
+		@media (min-width: 32em) { @content; }
+	}
+	@else if $point == 25 /* 400px */{
+		@media (min-width: 25em) { @content; }
+	}
+}
+@mixin button($back-color, $text-color, $border-color) {
+	display: block;
+	padding: 0.85em;
+	text-align: center;
+	background: $back-color;
+	color: $text-color;
+	font-family: "proxima-nova", sans-serif;
+	font-weight: 700;
+	font-size: 1em;
+	border: 1px solid $border-color;
+	border-radius: 2px;
+	&:hover {
+		color: $text-color;
+		background: darken($back-color, 10%);
+		border-color: darken($back-color, 10%);
+	}
+}
+/* antialiasing mode font rendering */
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/*Clearfix*/
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+	zoom:1;
+}
+/*Box-sizing*/
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*Responsive Images*/
+img {
+	max-width: 100%;
+	height: auto;
+}
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}

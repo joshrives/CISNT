@@ -1,0 +1,104 @@
+.site-header {
+	padding-bottom: 1.5em;
+}
+.site-social {
+	text-align: right;
+	padding-top: 1em;
+	a {
+		padding-left: 0.5em;
+		color: $light-blue;
+	}
+}
+
+.nav-logo {
+	float: left;
+	img {
+		max-width: 8em;
+	}
+	@include bp(50) {
+		width: 30%;
+		img {
+			max-width: 12em;
+		}
+	}
+}
+
+.menu-toggle {
+	float: right;
+	@include button($blue, white, $blue);
+	font-size: 0.875em;
+	padding: 0.5em;
+	width: 5em;
+	margin-top: 1.35em;
+	&:hover {
+		background-color: lighten( $light-blue , 5% );
+		border-color: lighten( $light-blue , 5% );
+	}
+	@include bp(50) {
+		display: none;
+	}
+}
+
+.nav-links,
+.mobile-links {
+	display: block;
+	a {
+		padding: 0.5em 1.25em;
+		color: $black;
+		&:hover {
+			color: $blue;
+		}
+		&:last-child {
+			background: $orange;
+			border-radius: 2px;
+			color: white;
+			font-weight: 700;
+			margin-left: 0.75em;
+			&:hover {
+				background: darken($orange, 10%);
+			}
+		}
+	}
+	@include bp(50) {
+		float: right;
+		width: 70%;
+		text-align: right;
+		padding-top: 2.6em;
+	}
+}
+.mobile-links {
+	display: none;
+}
+.nav-links {
+	display: none;
+	@include bp(50) {
+		display: block;
+	}
+}
+.mobile-links.expanded {
+	background-color: white;
+	width: 100%;
+	position: absolute;
+	height: 100vh;
+	z-index: 999;
+	top: 7em;
+	.menu-toggle {
+		display: block;
+		width: 5em;
+		position: absolute;
+		top: -5.55em;
+		right: 0;
+		color: white;
+		padding: 0.5em 0 0.45em;
+		background-color: $orange;
+		border-color: $orange;
+	}
+	a {
+		margin: 1.5em 0;
+		display: block;
+		text-align: center;
+		&:last-child {
+			padding: 1em 0;
+		}
+	}
+}
